@@ -1,0 +1,438 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Incluye el padding y el borde en el tamaño total */
+}
+
+h1,
+h2,
+h3 {
+    margin: 20px 0;
+    color: #4CAF50;
+    /* Color verde para encabezados */
+}
+
+p {
+    margin-bottom: 15px;
+    /* Espacio debajo de los párrafos */
+    line-height: 1.6;
+    /* Mejora la legibilidad */
+}
+
+/* Estilo para listas */
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    /* Espacio a la izquierda */
+}
+
+.section {
+    margin: 20px 0;
+    /* Espacio entre secciones */
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    /* Fondo suave para secciones */
+}
+
+/* Estilos generales */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Estilos del formulario */
+form {
+    background-color: #fff;
+    /* Fondo blanco para el formulario */
+    padding: 20px;
+    /* Espaciado interno */
+    border-radius: 10px;
+    /* Bordes redondeados */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    /* Sombra suave */
+    width: 400px;
+    /* Ancho del formulario */
+    margin: auto;
+    /* Centra horizontalmente */
+    position: relative;
+    /* Posición relativa para usar con top */
+    top: 100%;
+    /* Mueve el formulario hacia abajo */
+
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Estilos del menú de navegación */
+nav {
+    background-color: #f5f5f5;
+    /* Fondo del menú */
+    padding: 10px 20px;
+    /* Espaciado interior */
+}
+
+
+nav ul {
+    list-style-type: none;
+    /* Elimina los puntos de la lista */
+    display: flex;
+    /* Usa flexbox para alinear horizontalmente */
+}
+
+nav li {
+    margin-right: 20px;
+    /* Espacio entre los elementos de la lista */
+}
+
+a {
+    text-decoration: none;
+    /* Sin subrayado por defecto */
+    color: blue;
+    /* Color del texto */
+}
+
+nav a:hover {
+    text-decoration: underline;
+    /* Subrayado al pasar el mouse */
+    color: #0056b3;
+    /* Color al pasar el mouse */
+}
+
+/* Estilos del panel de control */
+.panel-control {
+    width: 100%;
+    display: flex;
+    flex: 1;
+    /* Permite que el panel de control crezca y ocupe el espacio restante */
+    gap: 10px;
+}
+
+.panel-control aside {
+    width: 20%;
+    background-color: #f5f5f5;
+    /* Fondo del menú lateral */
+}
+
+.panel-control div {
+    width: 80%;
+    padding: 20px;
+    /* Espaciado interno para el contenido */
+}
+
+.panel-control aside nav {
+    width: 100%;
+    height: auto;
+    /* Cambiar a auto para permitir el ajuste dinámico */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-left: 20px;
+}
+
+.panel-control aside nav a {
+    text-decoration: none;
+    font-size: 20px;
+    letter-spacing: 1px;
+    /* Espaciado entre letras */
+    position: relative;
+    color: #333;
+    transition: color 0.3s ease;
+    padding: 10px 0;
+    /* Añadir más espaciado vertical */
+    margin: 5px 0;
+    /* Añadir un margen entre los enlaces */
+    width: 100%;
+    /* Asegura que el enlace ocupe todo el ancho */
+}
+
+.panel-control aside nav a::before,
+.panel-control aside nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #f09819;
+    /* Cambia el color si lo prefieres */
+    transition: width 0.3s ease;
+}
+
+.panel-control aside nav a::before {
+    bottom: 0;
+    left: 0;
+}
+
+.panel-control aside nav a::after {
+    top: 0;
+    right: 0;
+}
+
+.panel-control aside nav a:hover::before,
+.panel-control aside nav a:hover::after {
+    width: 100%;
+}
+
+.panel-control aside nav a:hover {
+    color: #ff512f;
+    /* Cambia el color del texto al pasar el mouse */
+}
+
+.panel-control div {
+    width: 80%;
+    height: 100%;
+    padding: 20px;
+    /* Espaciado interno para el contenido */
+}
+
+/* Estilos del header */
+header {
+    width: 100%;
+    height: 100px;
+    background-color: rgb(181, 235, 114);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 20px;
+    /* Espaciado horizontal */
+}
+
+.enlace {
+    position: relative;
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
+    padding: 10px 15px;
+    display: inline-block;
+    transition: color 0.3s ease;
+    margin-right: 100px;
+}
+
+.enlace::before,
+.enlace::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: black;
+    transition: width 0.3s ease;
+}
+
+.enlace::before {
+    left: 0;
+    bottom: 0;
+}
+
+.enlace::after {
+    right: 0;
+    top: 0;
+}
+
+.enlace:hover::before,
+.enlace:hover::after {
+    width: 100%;
+}
+
+.enlace:hover {
+    color: white;
+    text-shadow: 1px 1px 5px black;
+}
+
+
+
+.container {
+    width: auto;
+    /* Ajusta automáticamente al contenido */
+    max-width: 1200px;
+    /* Mantiene un ancho máximo para pantallas grandes */
+    padding: 20px;
+    margin: 20px auto;
+    /* Centra el contenedor */
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.footer {
+    background-color: #f5f5f5;
+    /* Fondo claro */
+    padding: 20px;
+    /* Espaciado interno */
+    text-align: center;
+    /* Centra el contenido */
+}
+
+.footer-content {
+    max-width: 1200px;
+    /* Limitar el ancho máximo */
+    margin: 0 auto;
+    /* Centrar el contenido */
+}
+
+.footer h3 {
+    margin-bottom: 10px;
+    /* Espacio debajo del título */
+}
+
+.footer p {
+    margin-bottom: 10px;
+    /* Espacio debajo del párrafo */
+}
+
+.footer nav ul {
+    list-style-type: none;
+    /* Elimina puntos de la lista */
+    padding: 0;
+    /* Elimina padding */
+    display: flex;
+    /* Usar flexbox para alineación */
+    justify-content: center;
+    /* Centra los elementos */
+}
+
+.footer nav li {
+    margin-right: 20px;
+    /* Espacio entre elementos */
+}
+
+.footer a {
+    text-decoration: none;
+    /* Sin subrayado */
+    color: #333;
+    /* Color del texto */
+}
+
+.footer .socials {
+    margin-top: 10px;
+    /* Espacio arriba de las redes sociales */
+}
+
+.footer .socials a {
+    margin: 0 10px;
+    /* Espacio entre enlaces sociales */
+}
+
+
+/* Estilos para Home */
+
+.intro {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.productos {
+    margin-bottom: 40px;
+}
+
+.productos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.producto-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    /* Animación en hover */
+}
+
+.producto-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.producto-card:hover {
+    transform: translateY(-5px);
+    /* Efecto de elevación al pasar el mouse */
+}
+
+.educacion {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+
+/* tipos */
+
+
+.tipo {
+    margin-bottom: 30px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+
+
+
+/* Bolsas */
+
+
+.bolsas-types {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+
+
+/* envases */
+
+
+
+.envases-types {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+
+/* Toallitas */
+
+
+.toallitas-types {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+}
